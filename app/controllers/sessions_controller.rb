@@ -5,6 +5,7 @@ class SessionsController<ApplicationController
       user.name = auth['info']['name']
     end
     session[:user_id] = user.try(:id)
+    @user=user.name
   end
 
 
