@@ -1,6 +1,6 @@
 class SessionsController<ApplicationController
   def create
-    raise auth.inspect
+    #raise auth.inspect
     user = User.find_or_create_by(:name => auth['name']) do |user|
       user.uid = auth['info']['uid']
     end
